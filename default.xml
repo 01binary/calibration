@@ -3,7 +3,7 @@
 <Settings>
   <!-- Number of inner corners per a item row and column. (square, circle) -->
   <BoardSize_Width>5</BoardSize_Width>
-  <BoardSize_Height>3</BoardSize_Height>
+  <BoardSize_Height>4</BoardSize_Height>
   
   <!-- The size of a square in some user defined metric system (pixel, millimeter)-->
   <Square_Size>20.5</Square_Size>
