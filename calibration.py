@@ -60,6 +60,6 @@ print('Camera Matrix')
 print(mtx)
 print()
 
-print('Distortion Matrix')
+print('Distortion Coefficients')
 print(dist)
 print()
