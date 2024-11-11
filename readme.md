@@ -27,7 +27,7 @@ If it's printed on `8.5` x `11` sheet of paper with no scaling, real-world dimen
 - Change into the folder
 - Capture 20-40 images with `image_view`
   ```
-  rosrun image_view image_view image:=<image topic>
+  rosrun image_view image_view image:=/camera/rgb/image_raw
   ```
   On the image view window, simply right-click and the current image will be saved to the current directory.
 
@@ -49,9 +49,9 @@ Build [ar_track_alvar](http://wiki.ros.org/ar_track_alvar) from [source](https:/
 ```
 rosrun ar_track_alvar individualMarkers \
   _marker_size:=9.577 \
-  _output_frame:="world" \
-  _cam_image_topic:="/camera/rgb/image_raw" \
+  _output_frame:="camera_link" \
+  _cam_image_topic:="/camera/depth_registered/points" \
   _cam_info_topic:="/camera/rgb/camera_info" \
-  _max_new_marker_error:=0.08 \
-  _max_track_error:=0.2
+  _max_new_marker_error:=0.5 \
+  _max_track_error:=0.5
 ```
