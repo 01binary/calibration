@@ -37,4 +37,21 @@ Run `calibration.py` script at the root of this repository with working director
 
 ## Cameras
 
-* Intel Realsense D435 inputs and outputs in `/inteal-realsense-d435`
+* Intel Realsense D435 [parameters](./intel-realsense-d435/parameters.md) in `/intel-realsense-d435`
+* Primesense Carmine 1.09 [parameters](./primesense-carmine-1.09/parameters.md) in `/primesense-carmine-1.09`
+
+## Markers
+
+Once the camera is calibrated, markers can be detected in 3D space.
+
+Build [ar_track_alvar](http://wiki.ros.org/ar_track_alvar) from [source](https://github.com/ros-perception/ar_track_alvar/tree/noetic-devel).
+
+```
+rosrun ar_track_alvar individualMarkers \
+  _marker_size:=9.577 \
+  _output_frame:="world" \
+  _cam_image_topic:="/camera/rgb/image_raw" \
+  _cam_info_topic:="/camera/rgb/camera_info" \
+  _max_new_marker_error:=0.08 \
+  _max_track_error:=0.2
+```
