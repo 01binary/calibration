@@ -49,7 +49,7 @@ Build [ar_track_alvar](http://wiki.ros.org/ar_track_alvar) from [source](https:/
 ```
 rosrun ar_track_alvar individualMarkers \
   _marker_size:=9.577 \
-  _output_frame:="camera_link" \
+  _output_frame:="camera_rgb_optical_frame" \
   _cam_image_topic:="/camera/depth_registered/points" \
   _cam_info_topic:="/camera/rgb/camera_info" \
   _max_new_marker_error:=0.5 \
