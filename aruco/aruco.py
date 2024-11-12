@@ -22,7 +22,7 @@ import numpy
 # cv2.aruco.DICT_ARUCO_ORIGINAL
 
 DICTIONARY = cv2.aruco.DICT_ARUCO_ORIGINAL
-MARKER_ID = 1
+MARKER_ID = 74
 MARKER_SIZE = 300
 MARKER_BORDER_WIDTH = 1
 MARKER_FILENAME = "marker.png"
@@ -38,5 +38,4 @@ cv2.aruco.generateImageMarker(
     MARKER_BORDER_WIDTH)
 
 cv2.imwrite(MARKER_FILENAME, marker)
-cv2.imshow("ArUco Marker", marker)
-cv2.waitKey(0)
+
